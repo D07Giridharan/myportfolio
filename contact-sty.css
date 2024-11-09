@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 100%;
+}
+
+/* Header Styles */
+.header {
+    width: 100%;
+    background-image: linear-gradient(rgb(88, 88, 88), black);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Remove height: 100% to avoid forcing the element to cover full viewport height */
+    min-height: 60vh; /* Example to keep it responsive but reduce its size */
+}
+
+
+/* Navigation Styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    transform: translateY(-50px);
+    animation: dropText 1.5s ease-out forwards;
+    z-index: 10; /* Ensures nav is above other content */
+}
+
+@keyframes dropText {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo {
+    padding: 20px;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: larger;
+    background-image: linear-gradient(rgb(252, 12, 252), rgb(184, 0, 168));
+    background-clip: text;
+    color: transparent;
+    -webkit-text-stroke: 1px rgb(2, 0, 102);
+    transition: 0.3s;
+    border-radius: 40px;
+}
+
+.logo:hover {
+    cursor: pointer;
+    background-image: linear-gradient(rgb(104, 0, 104), rgb(184, 0, 168));
+    box-shadow: 0 0 20px rgb(104, 0, 104), 0 0 40px rgb(184, 0, 168);
+}
+
+/* Navigation Links */
+ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+ul li a {
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    transition: 0.3s;
+    border-radius: 30px;
+}
+
+ul li a:hover {
+    color: #000;
+    background-image: linear-gradient(rgb(104, 0, 104), rgb(184, 0, 168));
+    box-shadow: 0 0 20px rgb(104, 0, 104), 0 0 40px rgb(184, 0, 168);
+}
+
+/* Checkbox and Menu Toggle for Mobile */
+nav .checkbox {
+    display: none;
+}
+
+nav input {
+    display: none;
+}
+
+nav .checkbox img {
+    font-size: 2rem;
+    color: rgb(207, 0, 248);
+    cursor: pointer;
+    position: fixed; /* Fix the checkbox to top-right corner */
+    top: 20px;
+    right: 20px;
+    z-index: 15; /* Ensure it's above other content */
+
+}
+.contact{
+    
+    min-height: 100vh;
+    padding:50px;
+    text-align:center;
+     }
+    .container{
+        max-width: 800px;
+    margin:0 auto; 
+    animation: slideAnimation 3s ;
+}
+@keyframes slideAnimation {
+    0% {
+      transform: translateX(-100%); 
+    }
+    50% {
+      transform: translateX(0); 
+    } 
+}
+    
+    .container h2{
+    margin-bottom: 60px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    background-image:linear-gradient(rgb(252, 12, 252),rgb(184, 0, 168));
+    background-clip: text;
+    color: transparent;
+    text-shadow: 10px 10px 30px #000000;
+    -webkit-text-stroke: 2px black;
+    }
+    .contact-wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+         }
+    .contact-form{
+        text-align: left;
+        }
+    .contact-form h3{
+        float: left;
+         margin-bottom: 20px;
+         font-family:Verdana, Geneva, Tahoma, sans-serif;
+         font-size: 30px;
+         background-image:linear-gradient(rgb(252, 12, 252),rgb(184, 0, 168));
+         background-clip: text;
+         color: transparent;
+        text-align: center;
+         text-shadow: 10px 10px 30px #000000;
+         -webkit-text-stroke: 2px black;
+         }
+         .form-group{
+            margin-bottom: 20px;
+         }
+        input,textarea{
+            width:100%;
+            padding:12px;
+            border-radius: 8px;
+            border:none;
+            background-color: #f8f9fa;
+            color:#333;
+            }
+        input:focus,textarea:focus {
+            outline:none;
+            box-shadow: 0 0 8px #bbb;
+         }
+        button{
+            cursor: pointer;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            display: inline-block;
+            padding: 12px 28px;
+            background:aqua;
+            border-radius: 40px;
+            box-shadow: 0 0 10px rgb(235, 23, 189);
+            font-size: 16px;
+            color: rgb(10, 2, 8);
+            letter-spacing: 1px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+         .contact-info{
+            float: left;
+         }
+            .contact-info h5{
+            margin-bottom: 20px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 25px;
+            background-image:linear-gradient(rgb(252, 12, 252),rgb(184, 0, 168));
+            background-clip: text;
+            color: transparent;
+            text-shadow: 10px 10px 30px #000000;
+            -webkit-text-stroke: 2px black;
+         }
+         
+        .contact-info p{
+          display: flex;
+            
+           margin-bottom: 50PX;
+           margin-top: 50px;
+           margin-left: 30px;
+    font-weight: bolder;
+    letter-spacing: .5px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    color:aqua;
+
+            -webkit-text-stroke: 2px rgba(0, 0, 0, 0.356);
+   
+            }
+    
+        
+            @media (max-width: 768px) {
+                .nav {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+            
+                ul {
+                    flex-direction: column;
+                    width: 100%;
+                    gap: 10px;
+                }
+            .container{
+                padding: 0px;
+                }
+            .contact-wrapper{
+                grid-template-columns: 4fr;
+             } }
+@media( width < 750px){
+    nav .checkbox {
+        display: block;
+    }
+
+    /* Initially position the menu off-screen to the left */
+    ul {
+        position: absolute;
+        top: 85px;
+        left: -100%; /* Menu starts off-screen on the left */
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        gap: 50px;
+        transition: left 0.5s ease-in-out; /* Sliding effect from left */
+    }
+
+    /* When checkbox is checked, move the menu into view */
+    nav #check:checked ~ ul {
+        left: 0; /* Menu slides in from left */
+    }
+
+    ul li a {
+        font-size: 1.25rem;
+    }
+}

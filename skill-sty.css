@@ -1,0 +1,352 @@
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 100%;
+}
+
+/* Header Styles */
+.header {
+    width: 100%;
+    background-image: linear-gradient(rgb(88, 88, 88), black);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Remove height: 100% to avoid forcing the element to cover full viewport height */
+    min-height: 60vh; /* Example to keep it responsive but reduce its size */
+}
+
+
+/* Navigation Styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    transform: translateY(-50px);
+    animation: dropText 1.5s ease-out forwards;
+    z-index: 10; /* Ensures nav is above other content */
+}
+
+@keyframes dropText {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo {
+    padding: 20px;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: larger;
+    background-image: linear-gradient(rgb(252, 12, 252), rgb(184, 0, 168));
+    background-clip: text;
+    color: transparent;
+    -webkit-text-stroke: 1px rgb(2, 0, 102);
+    transition: 0.3s;
+    border-radius: 40px;
+}
+
+.logo:hover {
+    cursor: pointer;
+    background-image: linear-gradient(rgb(104, 0, 104), rgb(184, 0, 168));
+    box-shadow: 0 0 20px rgb(104, 0, 104), 0 0 40px rgb(184, 0, 168);
+}
+
+/* Navigation Links */
+ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+ul li a {
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    transition: 0.3s;
+    border-radius: 30px;
+}
+
+ul li a:hover {
+    color: #000;
+    background-image: linear-gradient(rgb(104, 0, 104), rgb(184, 0, 168));
+    box-shadow: 0 0 20px rgb(104, 0, 104), 0 0 40px rgb(184, 0, 168);
+}
+
+/* Checkbox and Menu Toggle for Mobile */
+nav .checkbox {
+    display: none;
+}
+
+nav input {
+    display: none;
+}
+
+nav .checkbox img {
+    font-size: 2rem;
+    color: rgb(207, 0, 248);
+    cursor: pointer;
+    position: fixed; /* Fix the checkbox to top-right corner */
+    top: 20px;
+    right: 20px;
+    z-index: 15; /* Ensure it's above other content */
+}
+
+/* Section Styles */
+.section {
+    width: 100%;
+    padding: 100px 20px;
+}
+
+.section_con {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Main Content */
+.one {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: slideAnimation 3.5s;
+}
+
+@keyframes slideAnimation {
+    0% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(0);
+    }
+}
+
+/* Text and Icon Styling */
+
+
+.name {
+    font-weight: bolder;
+    font-size: 50px;
+    background-image: linear-gradient(rgb(252, 12, 252), rgb(184, 0, 168));
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+    text-shadow: 10px 10px 30px #000;
+    -webkit-text-stroke: 2px black;
+}
+
+.dept {
+    font-weight: bolder;
+    font-size: 17px;
+    color: aqua;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px #000;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: aqua;
+}
+
+ol {
+    display: flex;
+    gap: 50px;
+    padding: 1px 10px;
+    list-style: none;
+}
+
+ol li a {
+    padding-top: 25px;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 3px solid rgb(147, 4, 160);
+}
+
+ol li a:hover {
+    cursor: pointer;
+    color: #000;
+    background-image: linear-gradient(rgb(104, 0, 104), rgb(184, 0, 168));
+    box-shadow: 0 0 20px rgb(104, 0, 104), 0 0 40px rgb(184, 0, 168);
+}
+
+.two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.two img {
+    width: 50%;
+    height:110%;
+    max-width: 250px;
+    border-radius: 50%;
+    border: 5px solid rgb(184, 0, 168);
+    background-color: whitesmoke;
+    transition: 0.5s;
+}
+
+.two img:hover {
+    cursor: pointer;
+    box-shadow: 0 0 20px rgb(104, 0, 104), 0 0 40px rgb(184, 0, 168),
+    0 0 20px rgb(104, 0, 104), 0 0 80px rgb(184, 0, 168);
+}
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.skill-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white ;
+    
+}
+.skill-name img{
+    background-color: aqua;
+    border-radius: 50%;
+    border: rgb(236, 19, 207) solid 3px;
+}
+
+.progress-bar {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    height: 30px;
+    width: 60%;
+    border: 2px solid aqua;
+}
+
+.progress {
+   
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgb(236, 19, 207);
+}
+
+.percentage {
+    text-align: right;
+    font-weight: bold;
+    color: aqua;
+    padding-right: 500px;
+}
+/* Media Queries for different screen sizes */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .section_con {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .name {
+        font-size: 40px;
+    }
+
+    .dept {
+        font-size: 15px;
+    }
+
+   
+}
+
+@media (max-width: 768px) {
+    /* Show the checkbox in the top right corner */
+    nav .checkbox {
+        display: block;
+    }
+
+    /* Initially position the menu off-screen to the left */
+    ul {
+        position: absolute;
+        top: 85px;
+        left: -100%; /* Menu starts off-screen on the left */
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        gap: 50px;
+        transition: left 0.5s ease-in-out; /* Sliding effect from left */
+    }
+
+    /* When checkbox is checked, move the menu into view */
+    nav #check:checked ~ ul {
+        left: 0; /* Menu slides in from left */
+    }
+
+    ul li a {
+        font-size: 1.25rem;
+    }
+
+    .name {
+        font-size: 50px;
+        padding-left: 70px;
+    }
+
+    .dept {
+        font-size: 20px;
+        padding-left: 70px;
+    }
+
+    .icons {
+        justify-content: center;
+    }
+
+    ol {
+        gap: 20px;
+    }
+
+    .two img {
+        width: 50%;
+        height: 110%;
+    }
+    .skills {
+        text-align: center;
+        
+    }
+    .progress-bar {
+        
+        height: 30px;
+        width: 80%;
+        text-align: center;
+    }
+    .percentage{
+        padding-right: 170px;
+    }
+}
